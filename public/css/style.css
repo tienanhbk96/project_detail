@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-border: #d8d2d2;
+}
+body {
+    background-color: #f5f5f5;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #fff;
+    border-bottom: 1px solid var(--primary-border);
+}
+
+#header_left {
+    display: flex;
+}
+
+#navbar {
+    cursor: pointer;
+}
+
+#BTN_Search,
+#BTN_Add_new {
+    color: rgb(88, 88, 233);
+    margin-left: 2rem;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#header_right {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+#header_right i {
+    cursor: pointer;
+}
+
+/* condition */
+
+#condition {
+    background-color: #fff;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    border: 1px solid var(--primary-border);
+    padding: 1rem;
+}
+
+#condition_header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+#condition_toggle {
+    cursor: pointer;
+}
+hr {
+    border: 0.5px solid var(--primary-border);
+    margin-top: 1rem;
+}
+
+#condition_input {
+    margin-top: 1rem;
+    margin-left: 3rem;
+}
+
+#condition_input label {
+    display: inline-block;
+    text-align: right;
+    width: 10rem;
+    margin-right: 1rem;
+}
+
+#condition_input input {
+   width: 15rem;
+   outline: none;
+   border: 1px solid var(--primary-border);
+   
+  
+}
+
+
+#result {
+    background-color: #fff;
+    margin: 2rem 1rem 0 2rem;
+    padding: 1rem;
+    border: 1px solid var(--primary-border);
+}
+
+#result_header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#result_table {
+    margin-top: 1rem;
+}
+
+table, th, td {
+    border: 1px solid var(--primary-border);
+}
+
+table {
+    width: 100%; 
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    padding: 5px;
+    text-align: center;
+}
+
+table th {
+    width: 14.29%;
+    color: #fff;
+    background-color: rgb(65, 154, 236);
+}
+
+td a {
+    text-decoration: none !important;
+}
+
+#result_header_select select {
+    outline: none;
+    border: 1px solid var(--primary-border);
+    padding: 0.2rem;
+}
+
+.pagination a {
+    text-decoration: none;
+    padding: 0.2rem 0.5rem;
+    background-color: #d6d1d1;
+    font-weight: 100;
+    color: black;
+}
+
+.pagination a:hover {
+    background-color: rgba(15, 97, 250, 0.767);
+    color: white;
+}
+
+#result_bottom {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.error {
+    border-color: rgb(247, 119, 119) !important;
+}
