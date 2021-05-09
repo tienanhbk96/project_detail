@@ -35,7 +35,7 @@ Route::group(
             'uses' => 'DetailController@detail'
         ]);
 
-        Route::post('/update', [
+        Route::post('update', [
             'as' => 'update',
             'uses' => 'DetailController@update'
         ]);
@@ -48,6 +48,11 @@ Route::group(
         Route::post('insert/search', [
             'as' => 'insert/search',
             'uses' => 'DetailController@search'
+        ]);
+
+        Route::post('insert/save', [
+            'as' => 'insert/save',
+            'uses' => 'DetailController@save'
         ]);
         
     }

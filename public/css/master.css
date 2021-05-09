@@ -100,9 +100,11 @@ hr {
    border: 1px solid var(--primary-border);
    font-size: 1.2rem;
    padding-left: 0.5rem;
- 
+   margin-top: 0.5rem;
 }
-
+.insert_search input {
+    margin-top: 0;
+}
 
 .insert_result textarea {
     outline: none;
@@ -130,10 +132,14 @@ hr {
     ime-mode: disabled;
 }
 
+.insert_search span,
 .insert_result span {
     display: block;
     color: red;
-    margin-top: 0.5rem;
     margin-left: 11rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
 }
+
+
 

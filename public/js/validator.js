@@ -13,10 +13,15 @@ var CommonModule = (function () {
                 if(val === '') {
                     $input.addClass('error');
                     error++;
-                    
+                    if( $(this).attr('id') == 'TXT_user_cd'){
+                        $(this).parent().next().html('入力してください');
+                    }else{
+                        $(this).next().html('入力してください');
+                    }
                 }
                 else {
                     $input.removeClass('error');
+                    $(this).next().html('');
                 }
 
             });
@@ -25,6 +30,7 @@ var CommonModule = (function () {
             let valueMin = $(this).val();
             if( valueMin.length < $(this).attr('min')){
                 error++;
+                $(this).next().html('6入力してください');
             }
             })
             //End validator min
@@ -66,8 +72,11 @@ var DemoModule = (function () {
             $('#BTN_Search').on('click', function(){
                 Submit();
             });
-            $('#BTN_Save').on('click', function(){
-                save();
+            $('#BTN_Save').on('click', function(e){
+                CommonModule.Validate();
+                if( !CommonModule.Validate()){
+                    e.preventDefault();
+                }
             });
 
             // validator min-max
@@ -123,6 +132,7 @@ var DemoModule = (function () {
                 e.preventDefault();
             }
         }
+
         catch (e) {
             console.log('OnlyInputNumber: ' + e.message);
         }
@@ -199,7 +209,7 @@ var DemoModule = (function () {
     var save = function(){
         CommonModule.Validate();
         if(CommonModule.Validate()){
-            console.log('a');
+            
         }
     };
     
