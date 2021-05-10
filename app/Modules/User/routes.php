@@ -35,8 +35,8 @@ Route::group(
             'uses' => 'DetailController@detail'
         ]);
 
-        Route::post('update', [
-            'as' => 'update',
+        Route::post('detail/update', [
+            'as' => 'detail/update',
             'uses' => 'DetailController@update'
         ]);
             

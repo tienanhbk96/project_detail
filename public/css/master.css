@@ -1,6 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-border: #d8d2d2;
+}
+body {
+    background-color: #d8d2d2;
+}
+
+
+
+
 #BTN_Back,
 #BTN_Delete,
-#BTN_Save {
+#BTN_Save,
+#BTN_Save_insert {
     color: rgb(88, 88, 233);
     margin-left: 2rem;
     cursor: pointer;
@@ -136,10 +153,35 @@ hr {
 .insert_result span {
     display: block;
     color: red;
-    margin-left: 11rem;
+    margin-left: 11.5rem;
     margin-bottom: 0.5rem;
     font-size: 0.8rem;
 }
 
+.success {
+    width: 18rem;
+    height: 18rem;
+    border-radius: 200rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(238, 231, 231);
+    color: red;
+    position: fixed;
+    top: 40vh;
+    left: 40vw;
+    opacity: 0;
+    transition: 0.5s linear;
+}
+.success i {
+    display: block;
+    color: rgb(89, 236, 89);
+    font-size: 8rem;
+}
+
+.show_success {
+    opacity: 1;
+}
 
 

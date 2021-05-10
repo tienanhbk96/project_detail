@@ -1,7 +1,12 @@
-
-@section('title')
-    insert
-@endsection
+@if(isset($m_user))
+    @section('title')
+        Update
+    @endsection
+@else
+    @section('title')
+        Insert
+    @endsection
+@endif
 
 @extends('welcome')
 @section('header_button')
@@ -20,7 +25,7 @@
                 消除
         </a>
     @else
-        <label for="insert_submit" id="BTN_Save" tabindex="2">
+        <label for="insert_submit" id="BTN_Save_insert" tabindex="2">
             <i class="far fa-save"></i>
             保存
         </label>  
@@ -31,7 +36,7 @@
     @endif
 
 @stop
-
+                                <!-- update -->
 
 @if(isset($m_user))
     @section('content')
@@ -55,8 +60,7 @@
             </div>
             <hr>
 
-            <form class="insert_result" action="{{route('update')}}" method="post">
-                <button type="submit" id="update_submit"></button>
+            <form class="insert_result"　id="update_submit">
                 <div class="insert_search">
                     <label for="insert_search_item">ユーザーコード</label>
                     <div class="insert_search_input">
@@ -76,7 +80,7 @@
                 <span></span>
 
                 <label for="">ユーザー名称英文</label>
-                <input name="user_nm_e" type="text" id="TXT_user_nm_e" class="insert_ime-disable required" max="5" min="3" tabindex="7" value="{{ $m_user[0]->user_nm_e}}">
+                <input name="user_nm_e" type="text" id="TXT_user_nm_e" class="insert_ime-disable required" tabindex="7" value="{{ $m_user[0]->user_nm_e}}">
                 <span></span>
 
                 <label for="">ユーザー略称英文</label>
@@ -138,6 +142,10 @@
                 <br>
                 
             </form>
+            <div class="success">
+                <i class="fas fa-check"></i>
+                <p></p>
+            </div>
         </div>
     @endsection
 @else
@@ -163,16 +171,15 @@
             </div>
             <hr>
 
-            <form class="insert_result" action="{{route('insert/save')}}" method="post">
-                <button type="submit" id="insert_submit"></button>
+            <form class="insert_result">
+                <!-- <button type="submit" id="insert_submit"></button> -->
                 <div class="insert_search">
                     <label for="insert_search_item">ユーザーコード</label>
                     <div class="insert_search_input">
                         <i class="fas fa-search" id="insert_search"></i>
-                        <input name="user_cd" type="text" id="TXT_user_cd" tabindex="4" class="required" value="">
+                        <input name="user_cd" type="text" id="TXT_user_cd" tabindex="4" class="required number-only" max="4" value="">
                     </div>
                     <span></span>
-
                 </div>
                 <hr>
                 
@@ -185,7 +192,7 @@
                 <span></span>
 
                 <label for="">ユーザー名称英文</label>
-                <input name="user_nm_e" type="text" id="TXT_user_nm_e" class="insert_ime-disable required" max="5" min="3" tabindex="7" value="">
+                <input name="user_nm_e" type="text" id="TXT_user_nm_e" class="insert_ime-disable required" tabindex="7" value="">
                 <span></span>
 
                 <label for="">ユーザー略称英文</label>
@@ -237,6 +244,7 @@
                 <textarea id="TXA_memo" name="memo" rows="4" cols="90"></textarea>
                
             </form>
+           
         </div>
     @endsection
 
