@@ -50,13 +50,16 @@
         <form id="condition_input" method="post">
 
             <label for="TXT_user_cd">ユーザーコード</label>
-            <input type="text" id="TXT_user_cd" class="required number-only"><br>
+            <input type="text" id="TXT_user_cd" class="number-only required">
+            <span></span>
 
             <label for="TXT_user_nm_j">ユーザー名称和文</label>
-            <input type="text" id="TXT_user_nm_j" class="required"><br>
+            <input type="text" id="TXT_user_nm_j" class="required">
+            <span></span>
 
             <label for="TXT_user_nm_e">ユーザー名称英文</label>
             <input type="text" id="TXT_user_nm_e" class='required'>
+            <span></span>
         </form>
     </div>
 

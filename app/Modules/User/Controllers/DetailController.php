@@ -75,6 +75,7 @@ class DetailController extends Controller
         ->get();
 
         return Response()->json($m_user);
+        
     }
 
 

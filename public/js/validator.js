@@ -1,6 +1,13 @@
 $(document).ready(function () {
     DemoModule.Init();
     DemoModule.InitEvents();
+
+    var sort = function(a, b, c){
+        
+        if(a > b && a > c){
+            
+        }
+    }
 });
 var CommonModule = (function () {
 
@@ -13,7 +20,7 @@ var CommonModule = (function () {
                 if(val === '') {
                     $input.addClass('error');
                     error++;
-                    if( $(this).attr('id') == 'TXT_user_cd'){
+                    if( $(this).attr('id') == 'TXT_user_cd' ){
                         $(this).parent().next().html('入力してください');
                     }else{
                         $(this).next().html('入力してください');
@@ -30,7 +37,7 @@ var CommonModule = (function () {
             let valueMin = $(this).val();
             if( valueMin.length < $(this).attr('min')){
                 error++;
-                $(this).next().html('6入力してください');
+                $(this).next().html($(this).attr('min') + '文字以上入力してください');
             }
             })
             //End validator min
@@ -166,7 +173,7 @@ var DemoModule = (function () {
                                     
                     },
                     success : function(response){
-                    
+                        
                         var result = JSON.parse(JSON.stringify(response));
                         $('#result_table').find("tbody tr").remove();
                         $.each( result, function( key, value ) 
@@ -220,3 +227,9 @@ var DemoModule = (function () {
 })();
 
 
+const sort = function(a, b, c){
+    a > b
+    d = a;
+    a = b;
+    b = d
+}

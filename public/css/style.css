@@ -90,7 +90,13 @@ hr {
    
   
 }
-
+#condition_input span {
+    display: block;
+    color: red;
+    margin-left: 11rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+}
 
 #result {
     background-color: #fff;

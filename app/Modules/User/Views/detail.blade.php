@@ -1,7 +1,12 @@
-
-@section('title')
-    insert
-@endsection
+@if(isset($m_user))
+    @section('title')
+        Update
+    @endsection
+@else
+    @section('title')
+        Insert
+    @endsection
+@endif
 
 @extends('welcome')
 @section('header_button')
@@ -169,10 +174,9 @@
                     <label for="insert_search_item">ユーザーコード</label>
                     <div class="insert_search_input">
                         <i class="fas fa-search" id="insert_search"></i>
-                        <input name="user_cd" type="text" id="TXT_user_cd" tabindex="4" class="required" value="">
+                        <input name="user_cd" type="text" id="TXT_user_cd" tabindex="4" class="required number-only" max="4" value="">
                     </div>
                     <span></span>
-
                 </div>
                 <hr>
                 
@@ -185,7 +189,7 @@
                 <span></span>
 
                 <label for="">ユーザー名称英文</label>
-                <input name="user_nm_e" type="text" id="TXT_user_nm_e" class="insert_ime-disable required" max="5" min="3" tabindex="7" value="">
+                <input name="user_nm_e" type="text" id="TXT_user_nm_e" class="insert_ime-disable required" tabindex="7" value="">
                 <span></span>
 
                 <label for="">ユーザー略称英文</label>
