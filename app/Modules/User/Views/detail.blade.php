@@ -29,7 +29,7 @@
             <i class="far fa-save"></i>
             保存
         </label>  
-        <a href="" id="BTN_Delete" tabindex="3">
+        <a href="#" id="BTN_Delete" tabindex="3">
             <i class="far fa-trash-alt"></i>
                 消除
         </a>
@@ -242,9 +242,13 @@
 
                 <label for="" class="label-black label-top">メモ</label>
                 <textarea id="TXA_memo" name="memo" rows="4" cols="90"></textarea>
-               
             </form>
-           
+            <div class="success">
+                <i class="fas fa-check"></i>
+                <p></p>
+            </div>
+               
+            
         </div>
     @endsection
 

@@ -107,7 +107,7 @@ var DemoModule = (function () {
                         max = min + 1;
                 }
                 if($(this).val().length < min ){
-                    $(this).next().html('Tối thiểu' + min +' kí tự');
+                    $(this).next().html(min +' 文字以上');
                 }
                 if ( $(this).val().length >= min &&  $(this).val().length < max ){
                     $(this).next().html('');
@@ -219,11 +219,3 @@ var DemoModule = (function () {
         InitEvents: InitEvents
     };
 })();
-
-
-const sort = function(a, b, c){
-    a > b
-    d = a;
-    a = b;
-    b = d
-}

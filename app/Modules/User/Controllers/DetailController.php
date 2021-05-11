@@ -52,8 +52,8 @@ class DetailController extends Controller
         $m_user->auth_role_div = $_POST['auth_role_div'];
         $m_user->incumbent_div = $_POST['incumbent_div'];
 
-        $m_user->pwd_upd_datetime = $_POST['pwd_upd_datetime'];
-        $m_user->login_datetime = $_POST['login_datetime'];
+        $m_user->pwd_upd_datetime = ($_POST['pwd_upd_datetime'] ?: '2021-02-02 00:00:00');
+        $m_user->login_datetime = ($_POST['login_datetime'] ?: '2021-02-02 00:00:00');
         $m_user->memo = $_POST['memo'];
         $m_user->save();
        
@@ -83,6 +83,8 @@ class DetailController extends Controller
     }
 
 
+
+
     public function save(Request $rq){
         $user_cd = $_POST['user_cd'];
         $m_user = Detail::find($user_cd);
@@ -103,13 +105,13 @@ class DetailController extends Controller
             $m_user->auth_role_div = $_POST['auth_role_div'];
             $m_user->incumbent_div = $_POST['incumbent_div'];
 
-            $m_user->pwd_upd_datetime = $_POST['pwd_upd_datetime'];
-            $m_user->login_datetime = $_POST['login_datetime'];
+            $m_user->pwd_upd_datetime = ($_POST['pwd_upd_datetime'] ?: '2021-02-02 00:00:00');
+            $m_user->login_datetime = ($_POST['login_datetime'] ?: '2021-02-02 00:00:00');
             $m_user->memo = $_POST['memo'];
             $m_user->save();
             
             $update = true;
-            return Response()->json($m_user);
+            return response()->json(['m_user' => $m_user, 'update' => $update]);
 
         }else{
             
@@ -146,8 +148,8 @@ class DetailController extends Controller
             $add_user->del_flg = '0';
             
             $add_user->save();
-
-            return Response()->json($add_user);
+            $update = false;
+            return response()->json(['add_user' => $add_user, 'update' => $update]);
         }
 
         
