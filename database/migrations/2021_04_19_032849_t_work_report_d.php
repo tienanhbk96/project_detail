@@ -47,4 +47,4 @@ class TWorkReportD extends Migration
     {
         Schema::dropIfExists('t_work_report_d');
     }
-}
+};

@@ -1,0 +1,78 @@
+#work_input {
+    margin-top: 1rem;
+    margin-left: 3rem;
+}
+
+#work_input label {
+    display: inline-block;
+    text-align: right;
+    width: 10rem;
+    margin-right: 1rem;
+}
+
+#work_input input {
+   width: 20rem;
+   height: 2rem;
+   outline: none;
+   border: 1px solid var(--primary-border);
+   margin-top: 0.5rem;
+}
+
+#work_input #TXT_working_date_no_from,
+#work_input #TXT_working_date_no_to {
+    width: 3rem;
+}
+
+#work_input #TXT_working_date_from,
+#work_input #TXT_working_date_to {
+    width: 10rem;
+}
+
+#condition #work_input span {
+    display: block;
+}
+
+
+
+#workSearch_result {
+    background-color: #fff;
+    margin: 2rem 1rem 0 2rem;
+    padding: 1rem;
+    border: 1px solid var(--primary-border);
+}
+
+#workSearch_result_header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#workSearch_table {
+    margin-top: 1rem;
+}
+
+#workSearch_table table, 
+#workSearch_table th, 
+#workSearch_table td {
+    border: 1px solid var(--primary-border);
+}
+
+#workSearch_table table {
+    width: 100%; 
+    border-collapse: collapse;
+}
+
+#workSearch_table th,
+#workSearch_table td {
+    padding: 5px;
+}
+
+
+#workSearch_table th {
+    width: 14.29%;
+    color: #fff;
+    background-color: rgb(65, 154, 236);
+}
+
+.table-color {
+    background-color: rgb(248, 232, 211);
+}

@@ -47,7 +47,7 @@ class UserController extends Controller
         $data = DB::table('m_user as m')
         ->leftJoin('s_lib_val as s',  function ($join) use ($libValNmJ){
             $join->on('s.lib_val_cd', '=', 'm.auth_role_div')
-            ->where('s.lib_cd', '=', $libValNmJ);
+                ->where('s.lib_cd', '=', $libValNmJ);
         })
         ->leftJoin('s_lib_val as d', function ($join) use ($libValNmJs) {
             $join->on('d.lib_val_cd', '=', 'm.incumbent_div')

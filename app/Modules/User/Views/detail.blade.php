@@ -9,6 +9,14 @@
 @endif
 
 @extends('welcome')
+
+
+@section('asset_footer')
+    <script src=" {{asset('js/users/validator.js')}}"></script>
+    <script src="{{asset('js/users/main.js')}}"></script>
+    <script src="{{asset('js/users/insert.js')}}"></script>
+@stop
+
 @section('header_button')
     <a href="{{route('index')}}"id="BTN_Back" tabindex="1">
         <i class="fas fa-reply"></i>
@@ -20,7 +28,7 @@
             <i class="far fa-save"></i>
             保存
         </label>   
-        <a href="remove/{{$m_user[0]->user_cd}}" id="BTN_Delete" tabindex="3">
+        <a href="remove/{{$m_user[0]->user_cd}} " id="BTN_Delete" tabindex="3">
             <i class="far fa-trash-alt"></i>
                 消除
         </a>
@@ -129,7 +137,7 @@
                     @endforeach
                 </select><br>
 
-
+                                
                 <label for="" class="label-black">パスワード変更日時</label>
                 <input name="pwd_upd_datetime" type="text" id="TXT_pwd_upd_datetime" class="" disabled value="{{ $m_user[0]->pwd_upd_datetime}}">
                 <span></span>                

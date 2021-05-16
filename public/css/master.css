@@ -17,7 +17,8 @@ body {
 #BTN_Back,
 #BTN_Delete,
 #BTN_Save,
-#BTN_Save_insert {
+#BTN_Save_insert,
+#BTN_output {
     color: rgb(88, 88, 233);
     margin-left: 2rem;
     cursor: pointer;
@@ -77,16 +78,16 @@ hr {
     top: 0;
     right: 0;
     bottom: 0;
-    
-}
-
-.insert_search i{
     display: inline-block;
     padding: 0.5rem;
     background-color: rgb(36, 154, 222);
     text-align: center;
     color: white;
     cursor: pointer;
+}
+
+.insert_search i{
+    
 }
 
 #TXT_user_cd {

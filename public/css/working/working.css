@@ -1,0 +1,110 @@
+#time_table {
+    margin-bottom: 2rem ;
+}
+
+.insert_result label,
+.insert_search label {
+    color: black;
+}
+
+.insert_search,
+.insert_result {
+    margin-top: 1rem;
+    margin-left: 0;
+}
+
+#time_table tbody td {
+    text-align: center;
+}
+
+.insert_result input {
+    margin-top: 0;
+}
+
+.insert_result select {
+    margin-top: 0;
+}
+.time_table_input {
+    position: relative;
+    display: inline-block;
+    border: none;
+    margin-top: 0;
+}
+
+.time_table_input i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.5rem;
+    background-color: rgb(36, 154, 222);
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+
+#time_table thead i,
+.delete {
+    font-size: 2rem;
+}
+
+#time_table thead i {
+    color: rgb(241, 222, 110);
+}
+
+.delete {
+    color: rgb(247, 134, 134);
+}
+
+
+#time_no,
+#time_remove {
+    width: 5%;
+}
+
+#time_man {
+    width: 20%;
+}
+
+
+#time_hour,
+#time_j {
+    width: 30%;
+}
+
+.time_hour {
+    display: flex;
+    border: none;
+    margin-top: 0.5rem;
+}
+
+.time_hour select {
+    margin-left: 1rem;
+    width: 8rem;
+}
+
+.time_hour p {
+    margin-left: 0.3rem;
+    margin-bottom: 0;
+}
+
+#total {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+}
+
+#total p {
+    margin-left: 3rem;
+}
+
+#TXT_work_user_cd,
+#TXT_work_report_no {
+    width: 100%;
+}
+
+#TXT_work_date {
+    width: 12rem;
+}

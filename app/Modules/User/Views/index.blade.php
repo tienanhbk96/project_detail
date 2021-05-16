@@ -23,6 +23,14 @@
 
 @extends('welcome')
 
+
+@section('asset_footer')
+<script src=" {{asset('js/users/validator.js')}}"></script>
+<script src="{{asset('js/users/main.js')}}"></script>
+<script src="{{asset('js/users/insert.js')}}"></script>
+@stop
+
+
 @section('header_button')
     <a href="#" id="BTN_Search" tabindex='1'>
         <i class="fas fa-search"></i>
@@ -38,30 +46,30 @@
 
 @section('content')
 <div id="condition">
-        <div id="condition_header">
-            <div id="condition_title">
-                ユーザーマスタ一覧
-            </div>
-            <div id="condition_toggle">
-                <i class="fas fa-chevron-down"></i>
-            </div>
+    <div id="condition_header">
+        <div id="condition_title">
+            ユーザーマスタ一覧
         </div>
-        <hr>
-        <form id="condition_input" method="post">
-
-            <label for="TXT_user_cd">ユーザーコード</label>
-            <input type="text" id="TXT_user_cd" class="number-only required">
-            <span></span>
-
-            <label for="TXT_user_nm_j">ユーザー名称和文</label>
-            <input type="text" id="TXT_user_nm_j" class="required">
-            <span></span>
-
-            <label for="TXT_user_nm_e">ユーザー名称英文</label>
-            <input type="text" id="TXT_user_nm_e" class='required'>
-            <span></span>
-        </form>
+        <div id="condition_toggle">
+            <i class="fas fa-chevron-down"></i>
+        </div>
     </div>
+    <hr>
+    <form id="condition_input" method="post">
+
+        <label for="TXT_user_cd">ユーザーコード</label>
+        <input type="text" id="TXT_user_cd" class="number-only required">
+        <span></span>
+
+        <label for="TXT_user_nm_j">ユーザー名称和文</label>
+        <input type="text" id="TXT_user_nm_j" class="required">
+        <span></span>
+
+        <label for="TXT_user_nm_e">ユーザー名称英文</label>
+        <input type="text" id="TXT_user_nm_e" class='required'>
+        <span></span>
+    </form>
+</div>
 
     <div id="result">
         <div id="result_header">
@@ -98,7 +106,7 @@
                 <tr>
                     <td ><a href='detail/{{$m_user->user_cd}}'>{{$m_user->user_cd }} </a></td>
                     <td >{{$m_user->user_nm_j }} </td>
-                    <td >{{$m_user->user_ab_j }} </td>
+                    <td >{{$m_user->user_ab_j }} </td>  
                     <td >{{$m_user->user_nm_e }} </td>
                     <td >{{$m_user->user_ab_e }} </td>
                     <td>{{$m_user->lib_val_nm_j}}</td>

@@ -44,6 +44,6 @@ class TWorkReportH extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('t_manufacture');
+        Schema::dropIfExists('t_work_report_h');
     }
 }
